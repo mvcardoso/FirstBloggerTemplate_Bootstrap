@@ -33,7 +33,7 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
     <b:skin><![CDATA[/*
     -----------------------------------------------
     Blogger Template Style
-    Name:			Radiant
+    Name:			First
     Designer:		Zuzza
     URL:			naodecidionomeainda
     ----------------------------------------------- */
@@ -59,10 +59,21 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
     .dropdown-item {
     color: #fff;
     }
-    .imgpad {
-        padding: 10px;
-        width: 100%;
-        }
+    img {
+    width: 100%;
+    height: auto;
+    }
+    .row {
+    margin-right: 0px;
+    }
+    .date-outer {
+    margin-left: 250px;
+    margin-right: 250px;
+    }
+    .mr-auto, .mx-auto {
+    margin-right: auto!important;
+    margin-left: auto!important;
+    }
     #main-wrapper {
     width: 100%;
     float: left;
@@ -90,13 +101,13 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
 
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-          <a class="navbar-brand" href="#"><data:blog.title/></a>
+          <a class="navbar-brand" href="/"><data:blog.title/></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto text-center">
               <li class="nav-item active">
                 <a class="nav-link" href="#">Jogos<span class="sr-only">(current)</span></a>
               </li>
@@ -132,17 +143,17 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
             <b:section class='header' id='header' maxwidgets='1' showaddelement='yes'>
                <b:widget id='Header1' locked='true' title='Blog title' type='Header' />
             </b:section>
-            <div id='main-wrapper'>
+            <div id='main-wrapper' class='text-center'>
                 <!-- Coming soon area -->
                 <b:if cond='data:blog.homepageUrl == data:blog.url'>
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row row-cols-2">
                       <div class="col">
-                        <h2>Em breve</h2>
-                        <img src="https://imgur.com/8MWvtUE.jpg" class="imgpad"/>
+                        <img src="https://imgur.com/8MWvtUE.jpg"/>
                       </div>
                       <div class="col">
-                        <h3>Saiba mais pelas redes sociais:</h3>
+                        <h2>Em breve: Nome do jogo</h2>
+                        <p>Saiba mais pelas redes sociais:</p>
                       </div>
                     </div>
                   </div>
