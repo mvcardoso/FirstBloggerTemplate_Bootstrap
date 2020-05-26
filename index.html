@@ -10,6 +10,7 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
 
+    <!-- Title -->
     <b:if cond='data:blog.pageType == "index"'>
           <title><data:blog.pageTitle/> &#10070; Desenvolvimento web e game making</title>
           <b:else/>
@@ -19,6 +20,15 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
           <b:if cond='data:blog.pageType == "error_page"'>
           <title>Página não encontrada &#10070; <data:blog.title/></title>
           </b:if>
+
+    <!-- Resultados da busca interna -->
+    <b:if cond='data:blog.searchQuery'> 
+        <b:if cond='data:numPosts == 0'>
+        <span style='text-transform: uppercase;'>
+        Não tem nada referente a <b><data:blog.searchQuery/></b> no site ainda :( <br/> 
+        Se quiser, você pode entrar em contato e fazer uma sugestão abaixo &#8595;</span>
+        </b:if>
+    </b:if>
 
     <b:skin><![CDATA[/*
     -----------------------------------------------
@@ -74,6 +84,7 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
                   <a class="dropdown-item" href="#">Pixel x1</a>
                   <a class="dropdown-item" href="#">Pixel x2</a>
                   <a class="dropdown-item" href="#">Pixel x3</a>
+				  <a class='dropdown-item' href='/search/label/teste'>teste</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">VX Ace Tilesets</a>
                   <a class="dropdown-item" href="#">MV Tilesets</a>
