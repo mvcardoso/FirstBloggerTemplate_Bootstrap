@@ -52,6 +52,9 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
     .dropdown-item {
     color: #fff;
     }
+    img {
+    width: 100%;
+    }
     #main-wrapper {
       width: 100%;
       float: left;
@@ -115,6 +118,18 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
                <b:widget id='Header1' locked='true' title='Blog title' type='Header' />
             </b:section>
             <div id='main-wrapper'>
+                <!-- Coming soon area -->
+                <div class="container">
+                    <div class="row row-cols-2">
+                      <div class="col">
+                        <h2>Em breve</h2>
+                        <img src="https://imgur.com/8MWvtUE.jpg"/>
+                      </div>
+                      <div class="col">
+                        <h3>Saiba mais pelas redes sociais:</h3>
+                      </div>
+                    </div>
+                  </div>
               <!-- Blog posts area -->
               <b:if cond='data:blog.homepageUrl != data:blog.url'>
               <b:section class='main' id='main' maxwidgets='' showaddelements='yes'>
