@@ -10,7 +10,15 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <b:if cond='data:blog.pageType == "index"'>
+          <title><data:blog.pageTitle/> &#10070; Desenvolvimento web e game making</title>
+          <b:else/>
+          <b:if cond='data:blog.pageType != "error_page"'>
+          <title><data:blog.pageName/> &#10070; <data:blog.title/></title>
+          </b:if></b:if>
+          <b:if cond='data:blog.pageType == "error_page"'>
+          <title>Página não encontrada &#10070; <data:blog.title/></title>
+          </b:if>
 
     <b:skin><![CDATA[
     #container {
