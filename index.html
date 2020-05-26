@@ -32,6 +32,7 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>>
     #sidebar-wrapper {
       width: 250px;
       float: right;
+      display: none;
     }
     #footer-widgets {
       padding: 0px 0px 5px 0px;
@@ -41,7 +42,31 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>>
 </head>
 
   <body>
-    <h1>Hello, world!!</h1>
+
+    <div id='container'>
+        <!-- Header -->
+        <b:section class='header' id='header' maxwidgets='1' showaddelement='yes'>
+            <b:widget id='Header1' locked='true' title='Blog title' type='Header' />
+        </b:section>
+    <div id='main-wrapper'>
+        <!-- Blog posts area -->
+        <b:section class='main' id='main' maxwidgets='2' showaddelements='yes' />
+            <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog' />
+        </b:section>
+    </div>
+    <div id='sidebar-wrapper'>
+        <!-- Right sidebar -->
+        <b:section class='sidebar' id='sidebar' maxwidgets='4' showaddelements='yes'>
+        <!-- Widgets can be added from layout page -->
+        </b:section>
+    </div>
+    <div id='footer-widgets'>
+        <!-- Footer -->
+        <b:section class='footer' id='footer' maxwidgets='4' showaddelements='yes'>
+        <b:widget id='Attribution1' locked='false' title='' type='Attribution' />
+        </b:section>
+    </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
