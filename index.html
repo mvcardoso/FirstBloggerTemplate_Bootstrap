@@ -38,12 +38,19 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
     URL:			naodecidionomeainda
     ----------------------------------------------- */
     body {
-    background-color: #343a40;
+    background-color: #111;
     color: #fff;
     }
+    h2 {
+    padding: 15px;
+    }
+    h3 {
+    padding: 20px;
+    }
     #container {
-      max-width: 100%;
-      margin: 0 auto;
+    background-color: #343a40;
+    max-width: 100%;
+    margin: 0 auto;
     }
     .container-fluid {
     padding-right: 0px;
@@ -52,20 +59,28 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
     .dropdown-item {
     color: #fff;
     }
-    img {
-    width: 100%;
-    }
+    .imgpad {
+        padding: 10px;
+        width: 100%;
+        }
     #main-wrapper {
-      width: 100%;
-      float: left;
+    width: 100%;
+    float: left;
     }
     #sidebar-wrapper {
-      width: 250px;
-      float: right;
-      display: none;
+    width: 250px;
+    float: right;
+    display: none;
+    }
+    .footer1 {
+    padding: 15px;
+    background-color: #111;
     }
     #footer-widgets {
-      padding: 0px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
+    }
+    .widget .item-control {
+    display: none;
     }
   ]]></b:skin>
 
@@ -119,21 +134,23 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
             </b:section>
             <div id='main-wrapper'>
                 <!-- Coming soon area -->
+                <b:if cond='data:blog.homepageUrl == data:blog.url'>
                 <div class="container">
                     <div class="row row-cols-2">
                       <div class="col">
                         <h2>Em breve</h2>
-                        <img src="https://imgur.com/8MWvtUE.jpg"/>
+                        <img src="https://imgur.com/8MWvtUE.jpg" class="imgpad"/>
                       </div>
                       <div class="col">
                         <h3>Saiba mais pelas redes sociais:</h3>
                       </div>
                     </div>
                   </div>
+                </b:if>
               <!-- Blog posts area -->
               <b:if cond='data:blog.homepageUrl != data:blog.url'>
               <b:section class='main' id='main' maxwidgets='' showaddelements='yes'>
-                 <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog' />
+                <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog' />
               </b:section>
             </b:if>
             </div>
@@ -143,9 +160,10 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
                 <!-- Widgets can be added from layout page -->
               </b:section>
             </div>
+            <div style="clear:both"></div>
             <div id='footer-widgets'>
               <!-- Footer -->
-              <b:section class='footer' id='footer' maxwidgets='' showaddelements='yes'>
+              <b:section class='footer1' id='footer' maxwidgets='' showaddelements='yes'>
                 <b:widget id='Attribution1' locked='false' title='' type='Attribution' />
               </b:section>
             </div>
