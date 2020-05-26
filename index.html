@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html b:css='false' b:version='2' class='v2' dir='ltr' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' 
 lang='pt-br' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' 
-xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>>
+xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8"/>
@@ -22,11 +22,11 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>>
 
     <b:skin><![CDATA[
     #container {
-      max-width: 960px;
+      max-width: 100%;
       margin: 0 auto;
     }
     #main-wrapper {
-      width: 710px;
+      width: 100%;
       float: left;
     }
     #sidebar-wrapper {
@@ -81,30 +81,30 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>>
         </nav>
         </div>
 
-    <div id='container'>
-        <!-- Header -->
-        <b:section class='header' id='header' maxwidgets='1' showaddelement='yes'>
-            <b:widget id='Header1' locked='true' title='Blog title' type='Header' />
-        </b:section>
-    <div id='main-wrapper'>
-        <!-- Blog posts area -->
-        <b:section class='main' id='main' maxwidgets='2' showaddelements='yes'>
-            <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog' />
-        </b:section>
-    </div>
-    <div id='sidebar-wrapper'>
-        <!-- Right sidebar -->
-        <b:section class='sidebar' id='sidebar' maxwidgets='4' showaddelements='yes'>
-        <!-- Widgets can be added from layout page -->
-        </b:section>
-    </div>
-    <div id='footer-widgets'>
-        <!-- Footer -->
-        <b:section class='footer' id='footer' maxwidgets='4' showaddelements='yes'>
-        <b:widget id='Attribution1' locked='false' title='' type='Attribution' />
-        </b:section>
-    </div>
-    </div>
+        <div id='container'>
+            <!-- Header -->
+            <b:section class='header' id='header' maxwidgets='1' showaddelement='yes'>
+               <b:widget id='Header1' locked='true' title='Blog title' type='Header' />
+            </b:section>
+            <div id='main-wrapper'>
+              <!-- Blog posts area -->
+              <b:section class='main' id='main' maxwidgets='' showaddelements='yes' />
+                 <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog' />
+              </b:section>
+            </div>
+            <div id='sidebar-wrapper'>
+              <!-- Right sidebar -->
+              <b:section class='sidebar' id='sidebar' maxwidgets='' showaddelements='yes'>
+                <!-- Widgets can be added from layout page -->
+              </b:section>
+            </div>
+            <div id='footer-widgets'>
+              <!-- Footer -->
+              <b:section class='footer' id='footer' maxwidgets='' showaddelements='yes'>
+                <b:widget id='Attribution1' locked='false' title='' type='Attribution' />
+              </b:section>
+            </div>
+           </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
