@@ -109,9 +109,11 @@ xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
             </b:section>
             <div id='main-wrapper'>
               <!-- Blog posts area -->
+              <b:if cond='data:blog.homepageUrl != data:blog.url'>
               <b:section class='main' id='main' maxwidgets='' showaddelements='yes'>
                  <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog' />
               </b:section>
+            </b:if>
             </div>
             <div id='sidebar-wrapper'>
               <!-- Right sidebar -->
